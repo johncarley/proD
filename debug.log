@@ -1,0 +1,3 @@
+[1123/182520:ERROR:process_reader_win.cc(233)] ReadMemory at 0x5f6000 of 40960 bytes failed: Richiesta ReadProcessMemory o WriteProcessMemory completata solo parzialmente. (0x12B)
+[1123/182520:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
+[1123/182520:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Tentativo di accesso a un processo in fase di chiusura.  (0xc000010a)

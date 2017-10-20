@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" ><!--<![endif]-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavora con noi</title>
+<!-- Fogli di stile -->
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-glyphicons.css">
+<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+<link rel="stylesheet" href="assets/css/stili-custom.css">
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js"></script>
+<!-- respond.js per IE8 -->
+<!--[if lt IE 9]>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- Header-->
+<header>
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+	<img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
+</div>
+<div id="p_visibility" class="col-sm-6" style="text-align:right;text-justify:auto">
+	<p>
+		Via Duca d'Aosta, 172<br>
+		work 0883 888507<br>
+		E-mail info.studioprod@gmail.com
+    </p>
+</div>
+</div>
+</div>
+
+<nav  class="navbar navbar-default">
+<div class="container">
+ <div class="collapse navbar-collapse navbar-responsive-collapse">
+    <ul id="navmenu" class="nav navbar-nav">
+   <li><a href="index.html">home</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="s1.html">s1</a></li>
+      <li><a href="s2.html">s2</a></li>
+      <li><a href="s3.html">s3</a></li>
+     </ul>
+    </li>
+    <li><a href="lavora-con-noi.html">lavora con noi</a></li>
+    <li><a href="portfolio/page/portfolio.html">Portfolio</a></li>
+    <li><a href="chi-siamo.html" hidden="">chi siamo</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+   </ul>
+ </div><!-- /.nav-collapse -->
+</div>
+</nav><!-- /.navbar -->
+  <select id="submenu" style="width:100%;text-align:center;" onChange="location=this.value;"> 
+    <option style="text-align:center" value="" selected="selected" disabled>-- MENU --</option> 
+    <option style="text-align:center" value="index.html">HOME</option> 
+    <option style="text-align:center" value="#" disabled>-- Servizi --</option> 
+    <option value="s1.html">- s1</option> 
+    <option value="s2.html">- s2</option> 
+    <option value="s3.html">- s3</option> 
+    <option value="lavora-con-noi.html" hidden="">Lavora con noi</option> 
+    <option value="portfolio/page/portfolio.html" >Portfolio</option> 
+    <option value="chi-siamo.html" >Chi siamo</option> 
+    <option value="contatti.html">Contatti</option> 
+  </select> 
+</header><!-- /header -->
+<!-- Barra testata di pagina -->
+<div class="header-portfolio clearfix">
+ <h2 class="pull-left">L</h2>
+ <h4 class="pull-left">AVORA CON NOI</h4>
+ <ul class="breadcrumb pull-right">
+  <li><a class="text-uppercase" href="index.html">Home</a></li>
+  <li class="active text-uppercase">Lavora con noi</li>
+</ul>
+</div><!-- /header-portfolio -->
+<!-- Contenuti (griglia) -->
+<div class="container border-container">
+<div class="row">
+ <div class="col-sm-6 col-sm-push-6">
+ <section id="info-contatto">
+<img  style="padding-bottom:15px;" class="img-responsive wrapper img-lav-con-noi" src="assets/img/shake-hands2.jpg">
+ </section>
+
+ </div><!-- /col-sm-6 -->
+ 
+<div class="col-sm-6 col-sm-pull-6">
+ <section id="margin-information" class="margine-bottom">
+  <h3 class="contatti-titoli">Contattaci</h3>
+  <form id="contatti-form" class="form-horizontal">
+  <div class="form-group">
+   <label for="inputNome" class="col-sm-3 control-label">Nome</label>
+   <div class="col-sm-9">
+    <input class="form-control input-with-feedback" type="text" id="inputNome" name="inputNome" placeholder="Nome e cognome">
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="inputQualification" class="col-sm-3 control-label">Titolo di studio</label>
+   <div class="col-sm-9">
+    <input class="form-control" list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Scuola Elementare"></option>
+    <option value="Scuola Media"></option>
+    <option value="Diploma"></option>
+    <option value="Laurea Triennale"></option>
+    <option value="Laurea Magistrale"></option>
+  </datalist>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+   <div class="col-sm-9">
+    <input class="form-control input-with-feedback" type="text" id="inputEmail" name="inputEmail" placeholder="Indirizzo e-mail">
+   </div>
+  </div>
+  
+  <div class="form-group">
+   <label for="inputEmail" class="col-sm-3 control-label">Allega Curriculum</label>
+   <div class="col-sm-9">
+    <input class="upload" type="file" name="uploadfile">
+   </div>
+  </div>
+  
+  <div class="form-group">
+   <label for="textMessaggio" class="col-sm-3 control-label">Messaggio</label>
+   <div class="col-sm-9">
+    <textarea class="form-control input-with-feedback" id="textMessaggio" name="textMessaggio" rows="6" placeholder="Inserisci il tuo messaggio..."></textarea>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="col-sm-9 col-sm-offset-3">
+    <button type="submit" class="btn btn-success btn-block">Invia</button>
+   </div>
+  </div>
+  </form>
+ </section>
+
+ </div><!-- /col-lg-6 -->
+</div><!-- /row -->
+</div><!-- /.container -->
+
+<!-- jQuery e plugin JavaScript  -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
+<script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+<script src="assets/plugins/validation/jquery.validate.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
+</html>

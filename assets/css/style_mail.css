@@ -1,0 +1,354 @@
+
+  		#mail{
+        height:20%;
+        width:20%;
+        }
+        
+        #risposta{
+        text-align: center;
+        font-size:1.2em;
+        font-family:'Arial',serif;
+        color: #FFFFFF;
+        position:fixed
+        }
+        
+        
+        #bottone{
+			display:inline-block;
+			padding:8px 20px;
+			background:#000;
+			border-radius:5px;
+			color:white;
+			font-size: 0.8em;
+			font-family:'Arial',serif;
+			text-align:center;
+			text-shadow:none;
+	
+			}
+     
+        
+        
+        #page{
+        	background-color:#050608;
+        }
+        
+        
+        #logo-home {
+ 				height:96%;
+ 				width:38%;
+			}
+
+
+
+@media all
+and (min-width : 300px) and (max-width :480px) {
+	
+#mail{
+        height:18%;
+        width:18%;
+        }
+        
+        #risposta{
+       
+        font-size:0.7em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.7em;
+	
+			}
+	 #logo-home {
+ 				height:78%;
+ 				width:40%;
+			}
+	
+
+	}
+	
+	@media all
+and (min-width : 300px) and (max-width : 380px) {
+	#mail{
+        height:18%;
+        width:18%;
+        }
+        
+        #risposta{
+       
+        font-size:0.7em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.7em;
+	
+			}
+	 #logo-home {
+ 				height:78%;
+ 				width:40%;
+			}
+	}
+	
+@media all
+and (min-width : 381px) and (max-width : 480px) {
+	
+	#mail{
+        height:18%;
+        width:18%;
+        }
+        
+        #risposta{
+       
+        font-size:0.7em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.7em;
+	
+			}
+	 #logo-home {
+ 				height:78%;
+ 				width:40%;
+			}
+}
+
+@media all and (min-width:481px) and (max-width:589px) { 
+
+#mail{
+        height:19%;
+        width:19%;
+        }
+        
+        #risposta{
+       
+        font-size:0.8em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.8em;
+	
+			}
+	 #logo-home {
+ 				height:78%;
+ 				width:39%;
+			}
+
+
+}
+
+
+
+@media all
+and (min-width : 590px) and (max-width :640px) {
+	
+	#mail{
+        height:19%;
+        width:19%;
+        }
+        
+        #risposta{
+       
+        font-size:0.9em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.9em;
+	
+			}
+	 #logo-home {
+ 				height:79%;
+ 				width:40%;
+			}
+	
+
+}
+
+@media all
+and (min-width : 641px) and (max-width :689px) {
+	
+		#mail{
+        height:19%;
+        width:19%;
+        }
+        
+        #risposta{
+       
+        font-size:0.9em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 0.9em;
+	
+			}
+	 #logo-home {
+ 				height:79%;
+ 				width:40%;
+			}
+	
+
+}
+
+
+@media all
+and (min-width : 690px) and (max-width :834px) {
+	
+#mail{
+        height:19%;
+        width:19%;
+        }
+        
+        #risposta{
+       
+        font-size:1em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 1em;
+	
+			}
+	 #logo-home {
+ 				height:80%;
+ 				width:43%;
+			}
+	
+	
+}
+
+@media all
+and (min-width : 835px) and (max-width :1024px) {
+#mail{
+        height:19%;
+        width:19%;
+        }
+        
+        #risposta{
+       
+        font-size:1em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 1em;
+	
+			}
+	 #logo-home {
+ 				height:80%;
+ 				width:43%;
+			}
+	
+	
+}
+
+
+
+@media all
+and (min-width : 1024px){
+#mail{
+        height:20%;
+        width:20%;
+        }
+        
+        #risposta{
+       
+        font-size:1.1em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 1.1em;
+	
+			}
+	 #logo-home {
+ 				height:80%;
+ 				width:45%;
+			}
+		
+}
+
+@media all   and (min-width : 1224px) {
+/* Styles */
+
+#mail{
+        height:24%;
+        width:24%;
+        }
+        
+        #risposta{
+       
+        font-size:1.3em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 1.3em;
+	
+			}
+	 #logo-home {
+ 				height:85%;
+ 				width:48%;
+			}
+
+	
+}
+
+/* Large screens ----------- */
+@media all   and (min-width : 1824px) {
+/* Styles */
+#mail{
+        height:27%;
+        width:27%;
+        }
+        
+        #risposta{
+       
+        font-size:1.4em;
+        }
+        
+        
+        #bottone{
+	
+			
+			font-size: 1.4em;
+	
+			}
+	 #logo-home {
+ 				height:90%;
+ 				width:50%;
+			}
+
+	
+	
+
+}
+
+
+        
+        
+        
+        
+  
