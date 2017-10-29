@@ -100,3 +100,11 @@ a:hover {
     opacity: 0.96;
 
 }
+
+.dropdown-menu > li > a {
+
+    text-transform: uppercase;
+    font-size: 0.88em;
+    font-weight: 600;
+    text-align: left;
+}

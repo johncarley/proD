@@ -1,4 +1,10 @@
 angular.module('mainApp', [])
+    .directive("navMenu", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/nav-menu-view.html"
+        };
+    })
     .controller('mainCtrl', function ($scope) {
 
         $scope.cardsArray = [
@@ -8,7 +14,7 @@ angular.module('mainApp', [])
 
                 title: 'Costruzioni & Design',
                 icon: 'fa fa-building',
-                linkUrl: 'pages/costruzioni-design.html'
+                linkUrl: 'costruzioni-design.html'
 
             },
 
@@ -17,7 +23,7 @@ angular.module('mainApp', [])
 
                 title: 'Impianti & Ambiente',
                 icon: 'fa fa-envira',
-                linkUrl: 'pages/impianti-ambiente.html'
+                linkUrl: 'impianti-ambiente.html'
 
             },
 
@@ -26,7 +32,7 @@ angular.module('mainApp', [])
 
                 title: 'Estimo & Consulenze',
                 icon: 'fa fa-area-chart',
-                linkUrl: 'pages/estimo-consulenze.html'
+                linkUrl: 'estimo-consulenze.html'
 
             },
 
@@ -35,8 +41,81 @@ angular.module('mainApp', [])
 
                 title: 'Portfolio',
                 icon: 'fa fa-folder',
-                linkUrl: 'portfolio/page/portfolio.html'
+                linkUrl: 'portfolio.html'
 
             }];
+
+        $scope.menuItem = {
+
+            //HOME
+            home:
+
+                {
+                    title: 'Home',
+                    icon: null,
+                    linkUrl: 'index.html'
+                },
+
+            //CHI SIAMO
+            chisiamo:
+                {
+                    title: 'Chi siamo',
+                    icon: null,
+                    linkUrl: 'chi-siamo.html'
+                },
+
+            //PORTFOLIO
+            portfolio:
+                {
+                    title: 'Portfolio',
+                    icon: null,
+                    linkUrl: 'portfolio.html'
+                },
+
+            costruzioni:
+
+            //COSTRUZIONI-DESIGN
+                {
+                    title: 'Costruzioni & Design',
+                    icon: 'fa fa-building',
+                    linkUrl: 'costruzioni-design.html'
+                },
+
+            estimo:
+
+            //ESTIMO-CONSULENZE
+                {
+                    title: 'Estimo & Consulenze',
+                    icon: 'fa fa-area-chart',
+                    linkUrl: 'costruzioni-design.html'
+                },
+
+            impianti:
+
+            //IMPIANTI-AMIBIENTE
+                {
+                    title: 'Impianti & Ambiente',
+                    icon: 'fa fa-envira',
+                    linkUrl: 'impianti-ambiente.html'
+                },
+            lavoracon:
+
+            //LAVORA CON NOI
+                {
+                    title: 'Lavora con noi',
+                    icon: null,
+                    linkUrl: 'lavora-con-noi.html'
+                },
+
+            contatti:
+
+            //CONTATTI
+                {
+                    title: 'Contatti',
+                    icon: null,
+                    linkUrl: 'contatti.html'
+                }
+        }
+        ;
 
     });

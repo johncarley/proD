@@ -9,26 +9,31 @@
 <title>S2</title>
 <!-- Fogli di stile -->
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-glyphicons.css">
-<link rel="stylesheet" href="../assets/plugins/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" href="../assets/plugins/flexslider/flexslider.css">
-<link rel="stylesheet" href="../assets/css/stili-custom.css">
+<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+<link rel="stylesheet" href="assets/css/stili-custom.css">
+
+    <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
+    <script src="library/bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/mainCtrl.js"></script>
 <!-- Modernizr -->
-<script src="../assets/js/modernizr.custom.js"></script>
+<script src="assets/js/modernizr.custom.js"></script>
 <!-- respond.js per IE8 -->
 <!--[if lt IE 9]>
-    <script src="../assets/js/respond.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="mainApp">
 <!-- Header e barra di navigazione -->
 <!-- Header e barra di navigazione -->
 <header>
 <div class="container">
 <div class="row">
 <div class="col-sm-6">
-	<img style="height:100px;" class="img-responsive img-logo" src="../assets/img/logoFinaleProd.jpg">
+	<img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
 </div>
 <div id="p_visibility" class="col-sm-6" style="text-align:right;text-justify:auto">
 	<p>
@@ -40,27 +45,7 @@
 </div>
 </div>
 
-<nav  class="navbar navbar-default">
-<div class="container">
- <div class="collapse navbar-collapse navbar-responsive-collapse">
-    <ul id="navmenu" class="nav navbar-nav">
-   <li><a href="../index.html">home</a></li>
-    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi <span class="caret"></span></a>
-     <ul class="dropdown-menu">
-      <li><a href="s1.html">s1</a></li>
-      <li><a href="s2.html">s2</a></li>
-      <li><a href="s3.html">s3</a></li>
-     </ul>
-    </li>
-    <li><a href="lavora-con-noi.html">lavora con noi</a></li>
-    <li><a href="../portfolio/page/portfolio.html">Portfolio</a></li>
-    <li><a href="chi-siamo.html" hidden="">chi siamo</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-   </ul>
- </div><!-- /.nav-collapse -->
-</div>
-</nav><!-- /.navbar -->
+    <nav-menu></nav-menu>
   <select id="submenu" style="width:100%;text-align:center;" onChange="location=this.value;"> 
     <option style="text-align:center" value="" selected="selected" disabled>-- MENU --</option> 
     <option style="text-align:center" value="index.html">HOME</option> 
@@ -79,7 +64,7 @@
  <h2 class="pull-left">S</h2>
  <h4 class="pull-left">ERVIZI</h4>
  <ul class="breadcrumb pull-right">
-  <li><a class="text-uppercase" href="../index.html">Home</a></li>
+  <li><a class="text-uppercase" href="index.html">Home</a></li>
   <li class="active text-uppercase">servizi</li>
   <li class="active text-uppercase">s2</li>
 </ul>
@@ -103,7 +88,7 @@ La commessa è consistita nella progettazione degli impianti tecnologici a servi
 
 <div class="col-xs-9 col-sm-3">
  <div class="box-progetto">
-  <a href="../assets/img/Attestato-puglia-2011.gif" title="Modello(1) protocollo ITACA" class="fancybox thumbnail img-responsive"><img src="../assets/img/Attestato-puglia-2011.gif"></a>
+  <a href="assets/img/Attestato-puglia-2011.gif" title="Modello(1) protocollo ITACA" class="fancybox thumbnail img-responsive"><img src="assets/img/Attestato-puglia-2011.gif"></a>
   <p class="text-center">PROTOCOLLO ITACA</p>
   </div>
  </div>
@@ -111,7 +96,7 @@ La commessa è consistita nella progettazione degli impianti tecnologici a servi
   <!--Reti idrauliche -->
   <div class="col-xs-9 col-sm-3">
  <div class="box-progetto">
-  <a href="../assets/img/reti-idrauliche.jpg" title="Reti idrauliche opificio industriale" class="fancybox thumbnail img-responsive"><img src="../assets/img/reti-idrauliche.jpg"></a>
+  <a href="assets/img/reti-idrauliche.jpg" title="Reti idrauliche opificio industriale" class="fancybox thumbnail img-responsive"><img src="assets/img/reti-idrauliche.jpg"></a>
   <p class="text-center">RETI IDRAULICHE</p>
  </div>
 </div><!-- /Reti idrauliche-->
@@ -119,7 +104,7 @@ La commessa è consistita nella progettazione degli impianti tecnologici a servi
   <!--Vasche meteoriche-->
   <div class="col-xs-9 col-sm-3">
  <div class="box-progetto">
-  <a href="../assets/img/VASCHE.jpg" title="Vasche di trattamento acque meteoriche" class="fancybox thumbnail img-responsive"><img src="../assets/img/VASCHE.jpg"></a>
+  <a href="assets/img/VASCHE.jpg" title="Vasche di trattamento acque meteoriche" class="fancybox thumbnail img-responsive"><img src="assets/img/VASCHE.jpg"></a>
   <p class="text-center">VASCHE ACQUE METEORICHE</p>
  </div>
 </div> <!-- /Vasche meteoriche-->
@@ -127,7 +112,7 @@ La commessa è consistita nella progettazione degli impianti tecnologici a servi
  <!--Impianti di condizionamento-->
   <div class="col-xs-9 col-sm-3">
  <div class="box-progetto">
-  <a href="../assets/img/condizionamento.jpg" title="Impianti di condizionamento" class="fancybox thumbnail img-responsive"><img src="../assets/img/condizionamento.jpg"></a>
+  <a href="assets/img/condizionamento.jpg" title="Impianti di condizionamento" class="fancybox thumbnail img-responsive"><img src="assets/img/condizionamento.jpg"></a>
   <p class="text-center">IMPIANTI DI CONDIZIONAMENTO</p>
  </div>
 </div><!-- /Impianti di condizionamento-->
@@ -137,10 +122,10 @@ La commessa è consistita nella progettazione degli impianti tecnologici a servi
 </div><!-- /.container -->
 <!-- jQuery e plugin JavaScript  -->
 <script src="http://code.jquery.com/jquery.js"></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="../assets/plugins/flexslider/jquery.flexslider.js"></script>
-<script src="../assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
-<script src="../assets/plugins/validation/jquery.validate.js"></script>
-<script src="../assets/js/scripts.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
+<script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+<script src="assets/plugins/validation/jquery.validate.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
