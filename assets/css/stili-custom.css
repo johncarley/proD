@@ -661,15 +661,7 @@ box-shadow: 5px 5px 18px -1px rgba(0,0,0,0.75);
 	
 
 
-	@media all and (min-width : 768px) and (max-width : 1366px) {
-		select{
-		display:none;
-		visibility:hidden;	
-		}
-		
-		.border-container{height: 420px;}
-		
-	}
+
 
 		
 

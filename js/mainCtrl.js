@@ -7,6 +7,54 @@ angular.module('mainApp', [])
     })
     .controller('mainCtrl', function ($scope) {
 
+
+        $scope.stepArray = [
+
+            //PRIMA FASE
+            {
+                icon: 'fa-handshake-o',
+                number: 'Prima Fase',
+                title: 'In Studio',
+                description: ['Incontro conoscitivo',
+                    'Informazioni preliminari']},
+
+            //SECONDA FASE
+            {
+                icon: 'fa-map-marker',
+                number: 'Seconda Fase',
+                title: 'Sul Posto',
+                description: ['Sopralluogo sul posto',
+                    'Rilievo architettonico']},
+
+            //TERZA FASE
+            {
+                icon: 'fa-magic',
+                number: 'Terza Fase',
+                title: 'Fase Creativa',
+                description: ['Progettazione architettonica',
+                    'Redazione elaborati progettuali']},
+
+            //QUARTA FASE
+            {
+                icon: 'fa-file-text',
+                number: 'Quarta Fase',
+                title: 'Iter Burocratico',
+                description: ['Autorizzazioni',
+                    'Richieste preventivi']},
+
+            //QUINTA FASE
+            {
+                icon: 'fa-hand-o-right',
+                number: 'Quinta Fase',
+                title: 'Consegna',
+                description: ['Direzione lavori',
+                    'Conclusioni lavori']}
+
+
+
+        ];
+
+
         $scope.cardsArray = [
 
             //COSTRUZIONI & DESIGN
