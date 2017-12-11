@@ -1,16 +1,16 @@
 .step-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 4px;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
 }
 
 .step-item {
 
     border: lightgray 1px solid;
-    margin-left: 2%;
-    max-width: 13%;
+    margin-left: 4%;
+    max-width: 23%;
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
@@ -21,7 +21,7 @@
 .step-item h5 {
     font-weight: 600;
     text-transform: uppercase;
-    word-spacing: 15px;
+
 }
 
 .step-item h6 {
@@ -34,6 +34,7 @@
     text-align: center;
     font-size: 1.8em;
     opacity: 0.87;
+    padding-bottom: 1%;
 
 
 }
@@ -43,6 +44,7 @@
     opacity: 0.87;
 }
 .text-description{
+    padding-bottom: 1%;
     padding-left: 4%;
     text-align: start;
     font-size: 1.1em;
