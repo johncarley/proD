@@ -70,10 +70,10 @@
 <div class="row-portfolio">
 <div class="col-xs-6 col-sm-3" ng-repeat="folder in folderImage" >
   <div class="portfolio-thumbnail">
-     <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.boxLight}}">
+     <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.dataLightBox}}">
       <img src="{{folder.backgroundImg}}">
      </a>
-      <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.boxLight}}> </a>
+      <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.dataLightBox}}> </a>
       <div class="portfolio-caption">
        <h4 class="text-center">{{folder.caption}}</h4>
       </div>
