@@ -11,11 +11,9 @@
 <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-glyphicons.css">
-<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
 <link rel="stylesheet" href="assets/css/stili-custom.css">
  <link rel="stylesheet" href="portfolio/dist/css/lightbox.min.css">
-<link href="assets/css/lightbox.css" rel="stylesheet">
+<link rel="stylesheet" href="portfolio/dist/css/lightbox.css" rel="stylesheet">
 
  <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
  <script src="library/bower_components/angular/angular.js"></script>
@@ -23,7 +21,7 @@
  <script src="js/mainCtrl.js"></script>
 
 <!-- Modernizr -->
-<script src="assets/js/lightbox.js"></script>
+
 <script src="assets/js/modernizr.custom.js"></script>
 <!-- respond.js per IE8 -->
 <!--[if lt IE 9]>
@@ -67,88 +65,37 @@
 </div>
 
 <!-- Contenuti (griglia) -->
-<div class="container">
+<div class="container" ng-controller="mainCtrl">
 <section id="portfolio">
 <div class="row-portfolio">
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
+<div class="col-xs-6 col-sm-3" ng-repeat="folder in folderImage" >
+  <div class="portfolio-thumbnail">
+     <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.boxLight}}">
+      <img src="{{folder.backgroundImg}}">
+     </a>
+      <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.boxLight}}> </a>
+      <div class="portfolio-caption">
+       <h4 class="text-center">{{folder.caption}}</h4>
+      </div>
+  </div>
+</div>
 
-
-  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-  <img  src="assets/img/fancybox/pretty-1-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
-  </a>
-
-
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-2-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img class="img-responsive img-logo" src="assets/img/fancybox/pretty-4-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-4-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-1-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-2-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-3-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
-<div class="col-xs-6 col-sm-3">
- <div class="portfolio-thumbnail">
-  <img src="assets/img/fancybox/pretty-4-th.jpg" alt="">
-  <div class="portfolio-caption">
-   <h4 class="text-center">Immagine</h4>
-  </div>
- </div>
-</div>
 
 </div>
 </section>
 <!-- jQuery e plugin JavaScript  -->
+ <script src="portfolio/dist/js/lightbox.js"></script>
+ <script src="portfolio/dist/js/lightbox.min.js"></script>
+ <script src="portfolio/dist/js/lightbox-plus-jquery.js"></script>
+ <script src="portfolio/dist/js/lightbox-plus-jquery.min.js"></script>
+
+
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="dist/js/lightbox-plus-jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
 <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
 <script src="assets/js/scripts.js"></script>
+ <script src="assets/js/lightbox.js"></script>
 </body>
 </html>

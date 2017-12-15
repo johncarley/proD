@@ -7,6 +7,34 @@ angular.module('mainApp', [])
     })
     .controller('mainCtrl', function ($scope) {
 
+        $scope.folderImage = [
+
+            //PRIMA CARTELLA DI IMMAGINI
+            {
+                backgroundImg: 'assets/img/fancybox/pretty-1-th.jpg',
+                caption:'Lavoro 1',
+                boxLinkImg:['assets/img/fancybox/pretty-2.jpg',
+                    'assets/img/fancybox/pretty-3-th.jpg','assets/img/pencil-1.jpg'],
+                boxLight:'cartella-1',
+            },
+
+            //SECONDA CARTELLA DI IMMAGINI
+            {
+                backgroundImg: 'assets/img/fancybox/pretty-2-th.jpg',
+                caption:'Lavoro 2',
+                boxLinkImg:['assets/img/pencil-1.jpg','assets/img/pencil-2.jpg'],
+                boxLight:'cartella-2',
+            },
+
+            //TERZA CARTELLA DI IMMAGINI
+            {
+                backgroundImg: 'assets/img/fancybox/pretty-4-th.jpg',
+                caption:'Lavoro 3',
+                boxLinkImg:['assets/img/pencil-3.jpg','assets/img/flexslider/flex-1.jpg','assets/img/pencil-1.jpg'],
+                boxLight:'cartella-3',
+            },
+        ];
+
 
         $scope.stepArray = [
 
