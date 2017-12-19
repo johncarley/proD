@@ -1,0 +1,91 @@
+<header>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-9">
+                <img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
+            </div>
+
+            <div class="col-sm-3">
+
+                <contact-header></contact-header>
+
+            </div>
+        </div>
+    </div>
+
+    <nav-menu></nav-menu>
+
+</header>
+
+<div class="row-img-home">
+    <div class="col-sm-12">
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="assets/img/flexslider/flex-4.jpg">
+                    <div class="flex-caption">
+                        <p class="flex-caption-text">
+                            <span>...follia è fare sempre</span><br>
+                            <span>la stessa cosa</span><br>
+                            <span>e aspettare</span><br>
+                            <span>risultati diversi...</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/flexslider/flex-4.jpg">
+                    <div class="flex-caption">
+                        <p class="flex-caption-text">
+                            <span>...l'unica crisi pericolosa</span><br>
+                            <span>è quella</span><br>
+                            <span>di non voler lottare</span><br>
+                            <span>per superarla...</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/flexslider/flex-4.jpg">
+                    <div class="flex-caption">
+                        <p class="flex-caption-text">
+
+                            <span>...la mente è come</span><br>
+                            <span>un paracadute.</span><br>
+                            <span>Funziona solo</span><br>
+                            <span>se si apre....</span><br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row card-list">
+    <div>
+        <div class="link-container" ng-controller="mainCtrl">
+
+            <div ng-repeat="card in cardsArray" class="card-item material-shadow pointer">
+
+                <a class="card-item" ng-href="{{card.linkUrl}}">
+                    <div class="card-container">
+                        <div class="card-icon">
+                            <i style="font-size: 3em;" class="fa {{card.icon}}"></i>
+                        </div>
+                        <div class="card-title">{{card.title}}</div>
+
+                    </div>
+
+
+                </a>
+
+
+            </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>

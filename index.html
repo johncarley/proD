@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"><!--<![endif]-->
-<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProD</title>
+
     <!-- Fogli di stile -->
     <link rel="styleshee" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
@@ -17,7 +13,9 @@
     <link rel="stylesheet" href="assets/css/stili-custom.css">
 
     <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
+
     <script src="library/bower_components/angular/angular.js"></script>
+    <script type='text/javascript' src='library/bower_components/angular-media-queries/match-media.js'></script>
     <link rel="stylesheet" href="css/home.css">
     <script src="js/mainCtrl.js"></script>
 
@@ -29,134 +27,20 @@
     <![endif]-->
 </head>
 <body ng-app="mainApp">
-<!-- HEADER E MENU-->
-<header>
-    <div class="container">
-        <div class="row">
-            <!-- COLONNA LOGO -->
-            <div class="col-sm-9">
-                <img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
-            </div>
-            <!-- COLONNA CONTATTI -->
-            <div class="col-sm-3">
 
-                <div class="badge contact-badge">
-                    <label>
-                        <span style="font-size: 0.88em;padding-right: 11px;">Via Duca d'Aosta, 172</span>
-                        <span><i class="fa fa-map-marker"></i>
-                    </span>
-                    </label>
-                    <label>
-                        <span style="font-size: 0.88em;padding-right: 11px;">0883.888507</span>
-                        <span><i class="fa fa-phone"></i></span>
-                    </label>
-                    <label><span style="font-size: 0.88em;padding-right: 11px;">info.studioprod@gmail.com</span>
-                        <span><i class="fa fa-envelope"></i></span>
-                    </label>
+<div ng-controller="mainCtrl">
 
-                </div>
+<!--IF DESKTOP-->
+<home-desktop-template ng-show="!isMobile"></home-desktop-template>
 
-                </p>
-            </div>
-        </div>
-    </div>
+<!--IF NOT DESKTOP-->
+<home-smartphone-template ng-show="isMobile"></home-smartphone-template>
 
-    <nav-menu></nav-menu>
-
-    <select id="submenu" style="width:100%;text-align:center;" onChange="location=this.value;">
-        <option style="text-align:center" value="" selected="selected" disabled>-- MENU --</option>
-        <option style="text-align:center" value="index.html" hidden="">HOME</option>
-        <option style="text-align:center" value="#" disabled>-- Servizi --</option>
-        <option value="s1.html">- s1</option>
-        <option value="s2.html">- s2</option>
-        <option value="s3.html">- s3</option>
-        <option value="lavora-con-noi.html">Lavora con noi</option>
-        <option value="portfolio/page/portfolio.html">Portfolio</option>
-        <option value="chi-siamo.html">Chi siamo</option>
-        <option value="contatti.html">Contatti</option>
-    </select>
-</header><!-- /header -->
-
-<!-- Sezione slider con Flexslider -->
-<div class="row-img-home">
-    <div class="col-sm-12">
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="assets/img/flexslider/flex-4.jpg">
-                    <div class="flex-caption">
-                        <p class="flex-caption-text">
-                            <span>...follia è fare sempre</span><br>
-                            <span>la stessa cosa</span><br>
-                            <span>e aspettare</span><br>
-                            <span>risultati diversi...</span>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <img src="assets/img/flexslider/flex-4.jpg">
-                    <div class="flex-caption">
-                        <p class="flex-caption-text">
-                            <span>...l'unica crisi pericolosa</span><br>
-                            <span>è quella</span><br>
-                            <span>di non voler lottare</span><br>
-                            <span>per superarla...</span>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <img src="assets/img/flexslider/flex-4.jpg">
-                    <div class="flex-caption">
-                        <p class="flex-caption-text">
-
-                            <span>...la mente è come</span><br>
-                            <span>un paracadute.</span><br>
-                            <span>Funziona solo</span><br>
-                            <span>se si apre....</span><br>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div><!-- /.flexslider -->
-    </div><!-- /.col-sm-12 -->
-</div><!-- /.row -->
-
-
-<!-- CARD LINK -->
-<div class="row card-list">
-    <div>
-
-
-        <div class="link-container" ng-controller="mainCtrl">
-
-            <div ng-repeat="card in cardsArray" class="card-item material-shadow pointer">
-
-                <a class="card-item" ng-href="{{card.linkUrl}}">
-                    <div class="card-container">
-                        <div class="card-icon">
-                            <i style="font-size: 3em;" class="fa {{card.icon}}"></i>
-                        </div>
-                        <div class="card-title">{{card.title}}</div>
-
-                    </div>
-
-
-                </a>
-
-
-            </div>
-            </a>
-        </div>
-
-
-    </div>
 </div>
-
 
 <!-- jQuery e plugin JavaScript  -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
 <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
 <script src="assets/js/scripts.js"></script>
 </body>

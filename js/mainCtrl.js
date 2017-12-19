@@ -1,11 +1,58 @@
-angular.module('mainApp', [])
+angular.module('mainApp', ['matchMedia'])
     .directive("navMenu", function() {
         return {
             restrict: "E",
             templateUrl: "component/nav-menu-view.html"
         };
     })
-    .controller('mainCtrl', function ($scope) {
+    .directive("portfolioDesktop", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/portfolio/portfolio-desktop.html"
+        };
+    })
+    .directive("portfolioSmartphone", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/portfolio/portfolio-smartphone.html"
+        };
+    })
+    .directive("homeDesktopTemplate", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/home/home-desktop.html"
+        };
+    })
+    .directive("homeSmartphoneTemplate", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/home/home-smartphone.html"
+        };
+    })
+    .directive("contactHeader", function() {
+        return {
+            restrict: "E",
+            templateUrl: "component/widget/contact.html"
+        };
+    })
+    .controller('mainCtrl', ['$scope','screenSize',function ($scope,screenSize) {
+
+
+        //APPENA VIENE APERTA LA PAGINA CONTROLLO SE è UN PC/ SMARTPHONE
+        if (screenSize.is('xs, sm')) {
+            console.log("PRIMA VOLTA CELL");
+        } else {
+            console.log("PRIMA VOLTA PC");
+        }
+
+        //LISTENER SUL CAMBIO DELLA DIMENSIONE DELLA PAGINA
+        $scope.isMobile = screenSize.on('xs, sm', function(isMatch){
+            $scope.isMobile = isMatch;
+            console.log("CAMBIO" + isMatch);
+        });
+
+        $scope.test = "mamt";
+
 
         $scope.folderImage = [
 
@@ -32,9 +79,8 @@ angular.module('mainApp', [])
                 caption:'Lavoro 3',
                 boxLinkImg:['assets/img/pencil-3.jpg','assets/img/flexslider/flex-1.jpg','assets/img/pencil-1.jpg'],
                 dataLightBox:'cartella-3',
-            },
+            }
         ];
-
 
         $scope.stepArray = [
 
@@ -81,7 +127,6 @@ angular.module('mainApp', [])
 
 
         ];
-
 
         $scope.cardsArray = [
 
@@ -191,7 +236,6 @@ angular.module('mainApp', [])
                     icon: null,
                     linkUrl: 'contatti.html'
                 }
-        }
-        ;
+        };
 
-    });
+    }]);

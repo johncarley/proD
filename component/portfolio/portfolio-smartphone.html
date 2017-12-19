@@ -1,0 +1,55 @@
+<header>
+    <div class="container">
+        <div class="row">
+
+                <img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
+        </div>
+    </div>
+
+
+</header>
+
+<div class="header-portfolio clearfix">
+    <h2 class="pull-left">P</h2>
+    <h4 class="pull-left">ORTFOLIO</h4>
+    <ul class="breadcrumb pull-right">
+        <li><a class="text-uppercase" href="index.html">Home</a></li>
+        <li class="active text-uppercase">Portfolio</li>
+    </ul>
+</div>
+
+<div class="container" ng-controller="mainCtrl">
+    <section id="portfolio">
+        <div class="row-portfolio">
+            <div class="col-xs-6 col-sm-3" ng-repeat="folder in folderImage" >
+                <div class="portfolio-thumbnail">
+                    <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.dataLightBox}}">
+                        <img src="{{folder.backgroundImg}}">
+                    </a>
+                    <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.dataLightBox}}> </a>
+                    <div class="portfolio-caption">
+                        <h4 class="text-center">{{folder.caption}}</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</div>
+
+<div class="badge contact-badge" style="border-top: lightgray solid 1px;align-items: center;padding-top: 3%;">
+    <label>
+        <span style="font-size: 0.88em;padding-right: 11px;">Via Duca d'Aosta, 172</span>
+        <span><i class="fa fa-map-marker"></i>
+                    </span>
+    </label>
+    <label>
+        <span style="font-size: 0.88em;padding-right: 11px;">0883.888507</span>
+        <span><i class="fa fa-phone"></i></span>
+    </label>
+    <label><span style="font-size: 0.88em;padding-right: 11px;">info.studioprod@gmail.com</span>
+        <span><i class="fa fa-envelope"></i></span>
+    </label>
+
+</div>

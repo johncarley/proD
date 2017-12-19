@@ -15,8 +15,9 @@
  <link rel="stylesheet" href="portfolio/dist/css/lightbox.min.css">
 <link rel="stylesheet" href="portfolio/dist/css/lightbox.css" rel="stylesheet">
 
- <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
  <script src="library/bower_components/angular/angular.js"></script>
+ <script type='text/javascript' src='library/bower_components/angular-media-queries/match-media.js'></script>
+ <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
  <link rel="stylesheet" href="css/home.css">
  <script src="js/mainCtrl.js"></script>
 
@@ -29,73 +30,25 @@
 <![endif]-->
 </head>
 <body ng-app="mainApp">
-<!-- Header e barra di navigazione -->
-<!-- Header e barra di navigazione -->
-<header>
-<div class="container">
-<div class="row">
-<div class="col-sm-6">
-	<img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
-</div>
-<div id="p_visibility" class="col-sm-6" style="text-align:right;text-justify:auto">
-	<p>
-		Via Duca d'Aosta, 172<br>
-		work 0883 888507<br>
-		E-mail info.studioprod@gmail.com
-    </p>
-</div>
-</div>
-</div>
- <nav-menu></nav-menu>
+
+<div ng-controller="mainCtrl">
+<!--IF DESKTOP-->
+<portfolio-desktop ng-show="!isMobile"></portfolio-desktop>
+
+<!--IF NOT DESKTOP-->
+<portfolio-smartphone ng-show="isMobile"></portfolio-smartphone>
 </div>
 
 
-
-
-</header><!-- /header -->
-
-<!-- Barra testata di pagina -->
-<div class="header-portfolio clearfix">
- <h2 class="pull-left">P</h2>
- <h4 class="pull-left">ORTFOLIO</h4>
- <ul class="breadcrumb pull-right">
-  <li><a class="text-uppercase" href="index.html">Home</a></li>
-  <li class="active text-uppercase">Portfolio</li>
-</ul>
-</div>
-
-<!-- Contenuti (griglia) -->
-<div class="container" ng-controller="mainCtrl">
-<section id="portfolio">
-<div class="row-portfolio">
-<div class="col-xs-6 col-sm-3" ng-repeat="folder in folderImage" >
-  <div class="portfolio-thumbnail">
-     <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.dataLightBox}}">
-      <img src="{{folder.backgroundImg}}">
-     </a>
-      <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.dataLightBox}}> </a>
-      <div class="portfolio-caption">
-       <h4 class="text-center">{{folder.caption}}</h4>
-      </div>
-  </div>
-</div>
-
-
-</div>
-</section>
 <!-- jQuery e plugin JavaScript  -->
- <script src="portfolio/dist/js/lightbox.js"></script>
- <script src="portfolio/dist/js/lightbox.min.js"></script>
- <script src="portfolio/dist/js/lightbox-plus-jquery.js"></script>
- <script src="portfolio/dist/js/lightbox-plus-jquery.min.js"></script>
-
-
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+ <script src="http://code.jquery.com/jquery.js"></script>
 <script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
+ <script src="assets/js/scripts.js"></script>
+ <script src="portfolio/dist/js/lightbox.min.js"></script>
+ <script src="portfolio/dist/js/lightbox-plus-jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
-<script src="assets/js/scripts.js"></script>
- <script src="assets/js/lightbox.js"></script>
+
+
 </body>
 </html>
