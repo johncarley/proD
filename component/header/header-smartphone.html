@@ -1,0 +1,39 @@
+<div class="header-portfolio clearfix header-sm" style="margin-right: -10%;margin-left: -8%;">
+    <nav class="menu-sm">
+
+        <button ng-click="openMenu()" class="btn-outline-none"
+                style="background: transparent;border:none;color: white;"><i class="fa fa-bars"
+                                                                             style="font-size: 2em;"></i></button>
+
+        <ul id="menu-sm-ul" ng-show="isMenuOpened">
+
+            <li><a ng-href="{{menuItem.home.linkUrl}}" href="#" class="current">{{menuItem.home.title}}</a></li>
+            <li><a href="{{menuItem.chisiamo.linkUrl}}">{{menuItem.chisiamo.title}}</a></li>
+            <li><a href="{{menuItem.contatti.linkUrl}}">{{menuItem.contatti.title}}</a></li>
+            <li><a href="{{menuItem.portfolio.linkUrl}}">{{menuItem.portfolio.title}}</a></li>
+            <li ng-click="serviceDropdown()"><a>SERVIZI</a></li>
+            <div  ng-show="isServicePressed" style="padding-left:17px;">
+                <li class="sub-menu-service-item">
+                    <a ng-href="{{menuItem.impianti.linkUrl}}">
+                    <span><i
+                            class="fa {{menuItem.impianti.icon}}"></i></span>
+                        <span>{{menuItem.impianti.title}}</span>
+
+                    </a></li>
+                <li class="sub-menu-service-item">
+                    <a  ng-href="{{menuItem.costruzioni.linkUrl}}"><span><i
+                            class="fa {{menuItem.costruzioni.icon}}"></i></span>
+                        <span>{{menuItem.costruzioni.title}}</span></a></li>
+                <li class="sub-menu-service-item">
+                    <a ng-href="{{menuItem.estimo.linkUrl}}">
+
+                 <span><i
+                         class="fa {{menuItem.estimo.icon}}"></i></span>
+                        <span>{{menuItem.estimo.title}}</span>   </a></li>
+            </div>
+        </ul>
+    </nav>
+    <ul class="breadcrumb bread-sm">
+        <li class="active text-uppercase">{{name}}</li>
+    </ul>
+</div>

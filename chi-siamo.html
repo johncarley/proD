@@ -10,98 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Siamo</title>
     <!-- Fogli di stile -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-glyphicons.css">
-    <link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
     <link rel="stylesheet" href="assets/css/stili-custom.css">
-
-    <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
-    <script src="library/bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="portfolio/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="portfolio/dist/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/chi-siamo.css">
+    <link rel="stylesheet" href="component/portfolio/style-sm.css">
+    <link rel="stylesheet" href="library/bower_components/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main-sm.css">
+
+    <script src="library/bower_components/angular/angular.js"></script>
+    <script type='text/javascript' src='library/bower_components/angular-media-queries/match-media.js'></script>
     <script src="js/mainCtrl.js"></script>
 
-    <!-- Modernizr -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <!-- respond.js per IE8 -->
-    <!--[if lt IE 9]>
-    <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body ng-app="mainApp">
-<!-- Header e barra di navigazione -->
-<!-- Header e barra di navigazione -->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <img style="height:100px;" class="img-responsive img-logo" src="assets/img/logoFinaleProd.jpg">
-            </div>
-            <div id="p_visibility" class="col-sm-6" style="text-align:right;text-justify:auto">
-                <p>
-                    Via Duca d'Aosta, 172<br>
-                    work 0883 888507<br>
-                    E-mail info.studioprod@gmail.com
-                </p>
-            </div>
-        </div>
-    </div>
 
-    <nav-menu></nav-menu>
+<div ng-controller="mainCtrl">
+<chi-siamo-desktop ng-show="!isMobile"></chi-siamo-desktop>
+<chi-siamo-smartphone ng-show="isMobile"></chi-siamo-smartphone>
+</div>
 
-</header><!-- /header -->
-<!-- Barra testata di pagina -->
-<div class="header-portfolio clearfix">
-    <h2 class="pull-left">C</h2>
-    <h4 class="pull-left">HI SIAMO</h4>
-    <ul class="breadcrumb pull-right">
-        <li><a class="text-uppercase" href="index.html">Home</a></li>
-        <li class="active text-uppercase">Chi Siamo</li>
-    </ul>
-</div><!-- /header-portfolio -->
-<!-- Contenuti (griglia) -->
-<div class="container border-container">
-    <div class="row">
-
-        <!-- TEXT CONTAINER-->
-        <div class="col-sm-12">
-
-            <p class="text-description">
-                Lo Studio <b><i>Proactive Design</i></b> è una realtà professionale, costituita da progettisti, che coniuga
-                progresso tecnologico ed esperienza negli ambiti dell’ingegneria civile ed industriale,
-                dell’efficientamento energetica, della prevenzione incendi e dell’estimo.
-                <br>La <i>mission</i> dello Studio è quella di proporre la giusta sinergia tra modus operandi consolidati e
-                metodologie innovative, ovvero la <b><i>progettazione proattiva</i></b>.</p>
-
-
-            <div class="title-step">
-                <span>Come si sviluppa un <font color="#906E7F"><b>nostro</b></font> progetto</span>
-            </div>
-            <div class="step-container" ng-controller="mainCtrl">
-                <div class="step-item material-shadow" ng-repeat="step in stepArray">
-             <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa {{step.icon}} fa-stack-1x fa-inverse"> </i>
-             </span>
-
-                    <h5> {{step.number}} </h5>
-                    <h6>{{step.title}}</h6>
-                    <div class="step-description-item" ng-repeat="sub in step.description">{{sub}}</div>
-                </div>
-            </div>
-        </div>
-
-
-    </div><!-- /row -->
-</div><!-- /.container -->
+<!-- jQuery e plugin JavaScript  -->
 <!-- jQuery e plugin JavaScript  -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/plugins/flexslider/jquery.flexslider.js"></script>
-<script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
-<script src="assets/plugins/validation/jquery.validate.js"></script>
-<script src="assets/js/scripts.js"></script>
+
 </body>
 </html>

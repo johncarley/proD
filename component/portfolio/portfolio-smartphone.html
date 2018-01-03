@@ -1,29 +1,10 @@
-<a href="#" id="logo"></a>
 
-
-<div class="header-portfolio clearfix header-sm" style="margin-right: -10%;margin-left: -8%;">
-    <nav class="menu-sm">
-        <a href="#" id="menu-icon"><i class="fa fa-bars" style="font-size: 2em;"></i></a>
-
-        <ul>
-
-            <li><a href="#" class="current"><i class="fa fa-home"></i>HOME</a></li>
-            <li><a href="#"><i class="fa fa-home"></i>CHI SIAMO</a></li>
-            <li><a href="#"><i class="fa fa-home"></i>CONTATTI</a></li>
-            <li><a href="#"><i class="fa fa-home"></i>PORTFOLIO</a></li>
-            <li><a href="#"><i class="fa fa-home"></i>SERVIZI</a></li>
-
-        </ul>
-    </nav>
-    <ul class="breadcrumb bread-sm">
-        <li class="active text-uppercase">Portfolio</li>
-    </ul>
-</div>
+<header-smartphone title="Portfolio"></header-smartphone>
 
 <div class="container" ng-controller="mainCtrl">
     <section id="portfolio">
         <div class="row-portfolio portfolio-container-sm">
-            <div class="col-sm-3" ng-repeat="folder in folderImage" >
+            <div class="col-sm-3" ng-repeat="folder in folderImage">
                 <div class="portfolio-thumbnail">
                     <a href="{{folder.backgroundImg}}" data-lightbox="{{folder.dataLightBox}}">
                         <img src="{{folder.backgroundImg}}">
@@ -31,7 +12,9 @@
                     <a ng-repeat="fold in folder.boxLinkImg" href="{{fold}}" data-lightbox={{folder.dataLightBox}}> </a>
                     <div class="portfolio-caption">
 
-                        <h4 class="text-center"> <i class="fa fa-folder-open" style="position: absolute;left: 24px;top:193px;font-size: 1.6em;"></i>{{folder.caption}}</h4>
+                        <h4 class="text-center"><i class="fa fa-folder-open"
+                                                   style="position: absolute;left: 24px;top:193px;font-size: 1.6em;"></i>{{folder.caption}}
+                        </h4>
                     </div>
                 </div>
             </div>
