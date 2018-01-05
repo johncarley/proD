@@ -2,6 +2,34 @@
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*
+Bedge
+ */
+.contact-badge-desktop {
+    padding: 0px;
+    text-align: left;
+    padding-right: 20px;
+    background: rgb(57, 134, 140);
+    border-radius: 22px;
+}
+
+    .circle-icon {
+
+        color: #42BBC1;
+    }
+
+
+
+/*
+Servizi
+ */
+.padding-img-service{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px
+}
+
+
 .card-list {
 
     margin-left: 0px;
