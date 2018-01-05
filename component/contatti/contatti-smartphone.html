@@ -1,0 +1,104 @@
+<header-smartphone icon="fa-address-book-o" title="Contatti"></header-smartphone>
+<!-- /header-portfolio -->
+<!-- Contenuti (griglia) -->
+
+<div class="container border-container">
+    <div class="col-sm-6 col-sm-push-6">
+        <section id="margin-information" class="margine-bottom">
+            <div style="margin-top:10px;" class="contatti-titoli">
+
+                    <span class="badge contact-badge-page">
+
+                        <span class="fa-stack fa-lg circle-icon">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa  fa-map fa-stack-1x" style="color: white"></i>
+                        </span>
+                        Dove siamo</span>
+            </div>
+            <iframe style="width:100%;" class="img-responsive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.7211670895413!2d16.301329115076094!3d41.22784647927912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13381a8175b1c245%3A0x46493f540742470d!2sVia+Duca+D&#39;Aosta%2C+172%2C+76123+Andria+BT!5e0!3m2!1sit!2sit!4v1476473127739" width="320" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div style="margin-top:10px;" class="contatti-titoli">
+
+                    <span class="badge contact-badge-page">
+
+                        <span class="fa-stack fa-lg circle-icon">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa fa-phone fa-stack-1x" style="color: white"></i>
+                        </span>
+                        Recapiti</span>
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <label style="display: flex;flex-direction: row;align-items: center;">
+                    <span><i class="fa fa-map-marker" style="padding-right: 16px;font-size: 1.3em;"></i>
+                    </span>
+                    <span style="font-size: 0.88em;padding-right: 11px;">Via Duca d'Aosta, 172<br> Andria (BT), 76123, Italy</span>
+
+                </label>
+                <label>
+                    <span><i class="fa fa-phone" style="padding-right: 9px;font-size: 1.3em;"></i></span>
+                    <span style="font-size: 0.88em;padding-right: 11px;">0883.888507</span>
+
+                </label>
+                <label>
+                    <span><i class="fa fa-mobile-phone" style="padding-right: 15px;font-size: 1.5em;"></i></span>
+                    <span style="font-size: 0.88em;padding-right: 11px;">328 3880389</span>
+
+                </label>
+                <label>
+                    <span><i class="fa fa-envelope" style="padding-right:6px;font-size: 1.3em;"></i></span>
+                    <span style="font-size: 0.88em;padding-right: 11px;"> <a id="link" href="mailto:#">info.studioprod@gmail.com</a></span>
+
+                </label>
+
+            </div>
+
+        </section>
+    </div><!-- /col-sm-6 -->
+    <div class="col-sm-6 col-sm-pull-6">
+        <section id="margin-information" class="margine-bottom">
+            <div style="margin-top:10px;" class="contatti-titoli">
+
+                    <span class="badge contact-badge-page">
+
+                        <span class="fa-stack fa-lg circle-icon">
+                         <i class="fa fa-circle fa-stack-2x"></i>
+                         <i class="fa  fa-envelope fa-stack-1x" style="color: white"></i>
+                        </span>
+                        Contattaci</span>
+            </div>
+            <form id="contatti-form" class="form-horizontal" action="../testmail.php" method="post">
+                <div style="padding-bottom:15px;" class="form-group">
+                    <label for="inputNome" class="col-sm-3 control-label">Nome</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" id="inputNome" name="inputNome" placeholder="Nome e cognome" class="input-with-feedback">
+                    </div>
+                </div>
+                <div style="padding-bottom:15px;" class="form-group">
+                    <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" id="inputEmail" name="inputEmail" placeholder="Indirizzo e-mail" class="input-with-feedback">
+                    </div>
+                </div>
+
+                <div style="padding-bottom:15px;" class="form-group">
+                    <label for="inputEmail" class="col-sm-3 control-label">Oggetto</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" id="inputObject" name="inputObject" placeholder="Oggetto e-mail" class="input-with-feedback">
+                    </div>
+                </div>
+
+                <div style="padding-bottom:15px;" class="form-group">
+                    <label for="textMessaggio" class="col-sm-3 control-label">Messaggio</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="textMessaggio" name="textMessaggio" rows="6" placeholder="Inserisci il tuo messaggio..."   class="input-with-feedback"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-success btn-block">Invia</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </div><!-- /col-lg-6 -->
+</div><!-- /.container -->
