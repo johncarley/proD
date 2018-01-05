@@ -12,6 +12,10 @@
     font-weight: 600;
 }
 
+.bread-sm {
+
+    padding-left: 117px;
+}
 
 /**
 STYLE LIBRERIA
@@ -26,10 +30,7 @@ STYLE LIBRERIA
 
 .menu-sm ul li {
 
-
-    float: left;
-    padding: 10px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 
 }
 
@@ -44,7 +45,35 @@ STYLE LIBRERIA
     padding-right: 5px;
 }
 
+.sub-menu-service-item a, .sub-menu-service-item span {
 
+    color: #906e7f;
+}
+
+.contact-badge-page {
+
+    background: rgb(57, 134, 140);
+    padding: 0px 15px 0px 0px;
+    border-radius: 22px;
+}
+
+.circle-icon {
+
+    color: #42BBC1;
+}
+
+.step-container-sm {
+
+    flex-direction: column;
+}
+
+.step-container-sm div {
+
+   max-width: 100%;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
 
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
@@ -59,10 +88,11 @@ STYLE LIBRERIA
 
         position: absolute;
         background: #fff;
-        border: 5px solid #444;
+        border: 5px solid #906e7f;
         top: 43px;
-        width: 50%;
+        width: 60%;
         z-index: 10;
+        padding-right: 1px;
 
     }
 
@@ -92,4 +122,6 @@ STYLE LIBRERIA
         flex-direction: row;
         align-items: center;
     }
+
+
 }

@@ -1,6 +1,40 @@
-<header-smartphone title="Chi siamo"></header-smartphone>
+<header-smartphone title="Chi siamo" icon="fa-users"></header-smartphone>
+
+<!-- Contenuti (griglia) -->
+<div class="container border-container">
+    <div class="row">
+
+        <!-- TEXT CONTAINER-->
+        <div class="col-sm-12">
+
+            <p class="text-description">
+                Lo Studio <b><i>Proactive Design</i></b> è una realtà professionale, costituita da progettisti, che coniuga
+                progresso tecnologico ed esperienza negli ambiti dell’ingegneria civile ed industriale,
+                dell’efficientamento energetica, della prevenzione incendi e dell’estimo.
+                <br>La <i>mission</i> dello Studio è quella di proporre la giusta sinergia tra modus operandi consolidati e
+                metodologie innovative, ovvero la <b><i>progettazione proattiva</i></b>.</p>
 
 
+            <div class="title-step">
+                <span>Come si sviluppa un <font color="#906E7F"><b>nostro</b></font> progetto</span>
+            </div>
+            <div class="step-container step-container-sm" style="flex-direction: column;" ng-controller="mainCtrl">
+                <div class="step-item material-shadow" ng-repeat="step in stepArray">
+             <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa {{step.icon}} fa-stack-1x fa-inverse"> </i>
+             </span>
+
+                    <h5> {{step.number}} </h5>
+                    <h6>{{step.title}}</h6>
+                    <div class="step-description-item" ng-repeat="sub in step.description">{{sub}}</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div><!-- /row -->
+</div><!-- /.container -->
 <div class="badge contact-badge" style="border-top: lightgray solid 1px;align-items: center;padding-top: 3%;">
     <label>
         <span style="font-size: 0.88em;padding-right: 11px;">Via Duca d'Aosta, 172</span>

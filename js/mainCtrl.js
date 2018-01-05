@@ -1,9 +1,55 @@
 var app = angular.module('mainApp', ['matchMedia']);
 
-app.directive("navMenu", function () {
+
+//PAGINE SERVIZI
+app.directive("costruzioniDesktop", function () {
     return {
         restrict: "E",
-        templateUrl: "component/nav-menu-view.html"
+        templateUrl: "component/servizi/costruzioni-design/costruzioni-design-desktop.html"
+    };
+})
+app.directive("costruzioniSmartphone", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/servizi/costruzioni-design/costruzioni-design-smartphone.html"
+    };
+})
+app.directive("impiantiDesktop", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/servizi/impianti-ambiente/impianti-ambiente-desktop.html"
+    };
+})
+app.directive("impiantiSmartphone", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/servizi/impianti-ambiente/impianti-ambiente-mobile.html"
+    };
+})
+app.directive("estimoDesktop", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/servizi/estimo-consulenze/estimo-consulenze-desktop.html"
+    };
+})
+app.directive("estimoSmartphone", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/servizi/estimo-consulenze/estimo-consulenze-mobile.html"
+    };
+});
+
+//MAIN PAGES
+app.directive("homeDesktopTemplate", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/home/home-desktop.html"
+    };
+});
+app.directive("homeSmartphoneTemplate", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/home/home-smartphone.html"
     };
 });
 app.directive("portfolioDesktop", function () {
@@ -30,40 +76,36 @@ app.directive("chiSiamoSmartphone", function () {
         templateUrl: "component/chi-siamo/chi-siamo-smartphone.html"
     };
 });
-app.directive("costruzioniDesktop", function () {
+app.directive("contattiDesktop", function () {
     return {
         restrict: "E",
-        templateUrl: "component/costruzioni-design/costruzioni-design-desktop.html"
-    };
-})
-app.directive("costruzioniSmartphone", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/costruzioni-design/costruzioni-design-smartphone.html"
-    };
-})
-app.directive("impiantiDesktop", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/impianti-ambiente/impianti-ambiente-desktop.html"
-    };
-})
-app.directive("impiantiSmartphone", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/impianti-ambiente/impianti-ambiente-mobile.html"
-    };
-})
-app.directive("homeDesktopTemplate", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/home/home-desktop.html"
+        templateUrl: "component/contatti/contatti-desktop.html"
     };
 });
-app.directive("homeSmartphoneTemplate", function () {
+app.directive("contattiSmartphone", function () {
     return {
         restrict: "E",
-        templateUrl: "component/home/home-smartphone.html"
+        templateUrl: "component/contatti/contatti-smartphone.html"
+    };
+});
+app.directive("lavoraConNoiDesktop", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/lavora-con-noi/lavora-con-noi-desktop.html"
+    };
+});
+app.directive("lavoraConNoiSmartphone", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/lavora-con-noi/lavora-con-noi-smartphone.html"
+    };
+});
+
+//WIDGET
+app.directive("navMenu", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/nav-menu-view.html"
     };
 });
 app.directive("contactHeader", function () {
@@ -72,27 +114,23 @@ app.directive("contactHeader", function () {
         templateUrl: "component/widget/contact.html"
     };
 });
+app.directive("headerDesktop", function () {
+    return {
+        restrict: "E",
+        templateUrl: "component/header/header-desktop.html"
+    };
+});
 app.directive("headerSmartphone", function () {
     return {
         restrict: "E",
         templateUrl: "component/header/header-smartphone.html",
         link: function (scope, element, attrs) {
             scope.name = attrs['title'];
+            scope.icon = attrs['icon'];
         }
     };
 });
-app.directive("estimoDesktop", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/estimo-consulenze/estimo-consulenze-desktop.html"
-    };
-})
-app.directive("estimoSmartphone", function () {
-    return {
-        restrict: "E",
-        templateUrl: "component/estimo-consulenze/estimo-consulenze-mobile.html"
-    };
-})
+
 app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize) {
 
 
@@ -124,8 +162,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         console.log("CAMBIO" + isMatch);
     });
 
-    $scope.test = "mamt";
-
+    //ARRAY IMMAGINI USATO IN PORTFOLIO
     $scope.folderImage = [
 
         //PRIMA CARTELLA DI IMMAGINI
@@ -154,6 +191,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         }
     ];
 
+    //ARRAY DEGLI STEP IN CHI-SIAMO
     $scope.stepArray = [
 
         //PRIMA FASE
@@ -204,6 +242,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
 
     ];
 
+    //ARRAY CARD HOME
     $scope.cardsArray = [
 
         //COSTRUZIONI & DESIGN
@@ -242,6 +281,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
 
         }];
 
+    //ARRAY USATO NEL MENU
     $scope.menuItem = {
 
         //HOME
@@ -249,7 +289,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
 
             {
                 title: 'Home',
-                icon: null,
+                icon: 'fa-home',
                 linkUrl: 'index.html'
             },
 
@@ -257,7 +297,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         chisiamo:
             {
                 title: 'Chi siamo',
-                icon: null,
+                icon: 'fa-users',
                 linkUrl: 'chi-siamo.html'
             },
 
@@ -265,7 +305,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         portfolio:
             {
                 title: 'Portfolio',
-                icon: null,
+                icon: 'fa-folder',
                 linkUrl: 'portfolio.html'
             },
 
@@ -274,7 +314,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         //COSTRUZIONI-DESIGN
             {
                 title: 'Costruzioni & Design',
-                icon: 'fa fa-building',
+                icon: 'fa fa-building-o',
                 linkUrl: 'costruzioni-design.html'
             },
 
@@ -284,7 +324,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
             {
                 title: 'Estimo & Consulenze',
                 icon: 'fa fa-area-chart',
-                linkUrl: 'costruzioni-design.html'
+                linkUrl: 'estimo-consulenze.html'
             },
 
         impianti:
@@ -300,7 +340,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         //LAVORA CON NOI
             {
                 title: 'Lavora con noi',
-                icon: null,
+                icon: 'fa-handshake-o',
                 linkUrl: 'lavora-con-noi.html'
             },
 
@@ -309,7 +349,7 @@ app.controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize
         //CONTATTI
             {
                 title: 'Contatti',
-                icon: null,
+                icon: 'fa-address-book-o',
                 linkUrl: 'contatti.html'
             }
     };

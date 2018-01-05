@@ -117,10 +117,86 @@ a:hover {
 
 }
 
+.box h3{
+    text-align:center;
+    position:relative;
+    top:80px;
+}
+.box {
+    width:70%;
+    height:200px;
+    background:#FFF;
+    margin:40px auto;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+    position: relative;
+}
+.effect2:before, .effect2:after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+}
+.effect2:after
+{
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.effect6
+{
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+}
+
 .dropdown-menu > li > a {
 
     text-transform: uppercase;
     font-size: 0.88em;
     font-weight: 600;
     text-align: left;
+}
+
+.memu-item-icon-dp {
+
+    font-size:1.37em!important;
+    padding-right: 6px;
+}
+
+.padding-img-service {
+
+    padding:20px 50px 20px 50px;
+}
+
+.padding-img-service img{
+ width:100%;
 }

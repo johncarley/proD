@@ -1,18 +1,18 @@
-<div class="header-portfolio clearfix header-sm" style="margin-right: -10%;margin-left: -8%;">
+<div class="header-portfolio clearfix header-sm material-shadow" style="margin-right: -10%;margin-left: -8%;">
     <nav class="menu-sm">
 
         <button ng-click="openMenu()" class="btn-outline-none"
-                style="background: transparent;border:none;color: white;"><i class="fa fa-bars"
-                                                                             style="font-size: 2em;"></i></button>
+                style="background: transparent;border:none;color: white;">
+            <i class="fa fa-bars" style="font-size: 2em;"></i></button>
 
         <ul id="menu-sm-ul" ng-show="isMenuOpened">
 
-            <li><a ng-href="{{menuItem.home.linkUrl}}" href="#" class="current">{{menuItem.home.title}}</a></li>
-            <li><a href="{{menuItem.chisiamo.linkUrl}}">{{menuItem.chisiamo.title}}</a></li>
-            <li><a href="{{menuItem.contatti.linkUrl}}">{{menuItem.contatti.title}}</a></li>
-            <li><a href="{{menuItem.portfolio.linkUrl}}">{{menuItem.portfolio.title}}</a></li>
-            <li ng-click="serviceDropdown()"><a>SERVIZI</a></li>
-            <div  ng-show="isServicePressed" style="padding-left:17px;">
+            <li><a ng-href="{{menuItem.home.linkUrl}}" href="#" class="current"><i class="fa {{menuItem.home.icon}}"></i>{{menuItem.home.title}}</a></li>
+            <li><a href="{{menuItem.chisiamo.linkUrl}}"><i class="fa {{menuItem.chisiamo.icon}}"></i>{{menuItem.chisiamo.title}}</a></li>
+            <li><a href="{{menuItem.portfolio.linkUrl}}"><i class="fa {{menuItem.portfolio.icon}}"></i>{{menuItem.portfolio.title}}</a></li>
+            <li><a href="{{menuItem.contatti.linkUrl}}"><i class="fa {{menuItem.contatti.icon}}"></i>{{menuItem.contatti.title}}</a></li>
+            <li ng-click="serviceDropdown()"><a><i class="fa fa-cogs"></i>SERVIZI</a></li>
+            <div  ng-show="isServicePressed">
                 <li class="sub-menu-service-item">
                     <a ng-href="{{menuItem.impianti.linkUrl}}">
                     <span><i
@@ -33,7 +33,8 @@
             </div>
         </ul>
     </nav>
-    <ul class="breadcrumb bread-sm">
-        <li class="active text-uppercase">{{name}}</li>
+    <ul class="breadcrumb bread-sm" >
+        <li class="active text-uppercase"><i class="fa {{icon}}" style="padding-right: 7px;font-size:1.5em"></i>{{name}}</li>
     </ul>
 </div>
+
