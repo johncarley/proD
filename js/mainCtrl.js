@@ -88,12 +88,51 @@ app.directive("contattiSmartphone", function () {
         templateUrl: "component/contatti/contatti-smartphone.html"
     };
 });
-app.directive("lavoraConNoiDesktop", function () {
+app.directive("lavoraConNoiDesktop",['$http', function ($http) {
     return {
         restrict: "E",
-        templateUrl: "component/lavora-con-noi/lavora-con-noi-desktop.html"
+        templateUrl: "component/lavora-con-noi/lavora-con-noi-desktop.html",
+        link: function (scope, element, attrs) {
+
+            scope.sendMail = function(){
+
+                var mailJSON ={
+                    "key": "xxxxxxxxxxxxxxxxxxxxxxx",
+                    "message": {
+                        "html": "",
+                        "text": "",
+                        "subject": "",
+                        "from_email": "sender@sending.domain.com",
+                        "from_name": "Support",
+                        "to": [
+                            {
+                                "email": "rutamichele.lr@gmail.com",
+                                "name": "Michele Ruta",
+                                "type": "to"
+                            }
+                        ],
+
+                    },
+                    "async": false,
+                    "ip_pool": "Main Pool"
+                };
+                var apiURL = "https://mandrillapp.com/api/1.0/messages/send.json";
+                $http.post(apiURL, mailJSON).success(function(data, status, headers, config) {
+                    alert('successful email send.');
+                    $scope.form={};
+                    console.log('successful email send.');
+                    console.log('status: ' + status);
+                    console.log('data: ' + data);
+                    console.log('headers: ' + headers);
+                    console.log('config: ' + config);
+                }).error(function(data, status, headers, config) {
+                    console.log('error sending email.');
+                    console.log('status: ' + status);
+                });
+            };
+        }
     };
-});
+}]);
 app.directive("lavoraConNoiSmartphone", function () {
     return {
         restrict: "E",

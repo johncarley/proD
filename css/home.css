@@ -11,11 +11,60 @@ Bedge
     padding-right: 20px;
     background: rgb(57, 134, 140);
     border-radius: 22px;
+    margin-left: -2%;
+    margin-top:1px;
+    margin-bottom: -1px;
+}
+
+.map-site {
+
+    width:100%;
+    border:lightgrey solid 1px;
+}
+
+
+.input-form-desktop {
+
+    padding: 20px;
+}
+
+.recapiti-box {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 10px;
+
+}
+
+
+.recapiti-item span {
+
+    font-size: 0.98em;
+}
+.recapiti-box > div {
+
+    width: 50%;
+}
+
+
+
+.label-form-desktop {
+
+    text-align: left!important;
+    padding-left: 33px;
 }
 
     .circle-icon {
 
         color: #42BBC1;
+    }
+
+    .badge-icon {
+
+        color: #906E7F;
+        font-size:1em;
+        font-weight: 900!important;
     }
 
 
@@ -78,6 +127,12 @@ Servizi
     box-shadow: 1.5px 1.5px 15px -5px rgba(0, 0, 0, 0.75);
 }
 
+.card {
+
+    margin-left: 4%;
+   margin-top: 4%;
+    border-top-left-radius: 10%;
+}
 .pointer {
 
     cursor: pointer;
@@ -155,6 +210,14 @@ a:hover {
     height:200px;
     background:#FFF;
     margin:40px auto;
+}
+
+
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.effect1{
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 /*==================================================

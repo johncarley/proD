@@ -59,7 +59,12 @@ STYLE LIBRERIA
 
 .circle-icon {
 
-    color: #906E7F;
+    color: white;
+}
+
+.badge-icon-sm {
+
+    font-size: 0.7em;
 }
 
 .step-container-sm {
