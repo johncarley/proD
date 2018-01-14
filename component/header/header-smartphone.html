@@ -9,28 +9,12 @@
 
             <li><a ng-href="{{menuItem.home.linkUrl}}" href="#" class="current"><i class="fa {{menuItem.home.icon}}"></i>{{menuItem.home.title}}</a></li>
             <li><a href="{{menuItem.chisiamo.linkUrl}}"><i class="fa {{menuItem.chisiamo.icon}}"></i>{{menuItem.chisiamo.title}}</a></li>
+            <li><a href="{{menuItem.impianti.linkUrl}}"><i class="fa {{menuItem.impianti.icon}}"></i>{{menuItem.impianti.title}}</a></li>
+            <li><a href="{{menuItem.costruzioni.linkUrl}}"><i class="fa {{menuItem.costruzioni.icon}}"></i>{{menuItem.costruzioni.title}}</a></li>
+            <li><a href="{{menuItem.estimo.linkUrl}}"><i class="fa {{menuItem.estimo.icon}}"></i>{{menuItem.estimo.title}}</a></li>
             <li><a href="{{menuItem.portfolio.linkUrl}}"><i class="fa {{menuItem.portfolio.icon}}"></i>{{menuItem.portfolio.title}}</a></li>
             <li><a href="{{menuItem.contatti.linkUrl}}"><i class="fa {{menuItem.contatti.icon}}"></i>{{menuItem.contatti.title}}</a></li>
-            <li ng-click="serviceDropdown()"><a><i class="fa fa-cogs"></i>SERVIZI</a></li>
-            <div  ng-show="isServicePressed">
-                <li class="sub-menu-service-item">
-                    <a ng-href="{{menuItem.impianti.linkUrl}}">
-                    <span><i
-                            class="fa {{menuItem.impianti.icon}}"></i></span>
-                        <span>{{menuItem.impianti.title}}</span>
-
-                    </a></li>
-                <li class="sub-menu-service-item">
-                    <a  ng-href="{{menuItem.costruzioni.linkUrl}}"><span><i
-                            class="fa {{menuItem.costruzioni.icon}}"></i></span>
-                        <span>{{menuItem.costruzioni.title}}</span></a></li>
-                <li class="sub-menu-service-item">
-                    <a ng-href="{{menuItem.estimo.linkUrl}}">
-
-                 <span><i
-                         class="fa {{menuItem.estimo.icon}}"></i></span>
-                        <span>{{menuItem.estimo.title}}</span>   </a></li>
-            </div>
+            <li><a href="{{menuItem.lavoracon.linkUrl}}"><i class="fa {{menuItem.lavoracon.icon}}"></i> {{menuItem.lavoracon.title}}</a> </li>
         </ul>
     </nav>
     <ul class="breadcrumb bread-sm" >

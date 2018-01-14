@@ -1,4 +1,5 @@
 .step-container {
+    margin-right: 4%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -10,7 +11,7 @@
 
     border: lightgray 1px solid;
     margin-left: 4%;
-    max-width: 23%;
+    width: 23%;
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
